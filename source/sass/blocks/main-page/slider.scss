@@ -1,0 +1,138 @@
+.slider {
+  background-color: $background-flat-white;
+  position: relative;
+
+  //@media (min-width: $tablet-width) {
+
+  //}
+
+  //@media (min-width: $desktop-width) {
+
+  //}
+}
+
+.slider__wrapper {
+  @include wrapper;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //@media (min-width: $tablet-width) {
+
+  //}
+
+  //@media (min-width: $desktop-width) {
+  //  width: 1440px;
+  //  margin: 0 auto;
+  //}
+}
+
+.slider__list {
+  @include list-style;
+  display: flex;
+}
+
+.slider__img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__item-new {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $base-violet;
+  text-align: center;
+}
+
+.slider__item-title {
+  font-size: 56px;
+  line-height: 80px;
+  font-weight: 700;
+  color: $base-black;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  //@media (min-width: $tablet-width) {
+  //}
+
+  //@media (min-width: $desktop-width) {
+  //}
+}
+
+.slider__item-info {
+  margin: 0;
+  text-align: center;
+
+  //@media (min-width: $tablet-width) {
+  //  font-size: 20px;
+  //  line-height: 32px;
+  //}
+
+  //@media (min-width: $desktop-width) {
+
+  //}
+}
+
+.slider__buy-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+}
+
+.slider__item-price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.slider__item-price-old {
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-violet;
+}
+
+.slider__item-button {
+  min-height: 40px;
+  text-decoration: none;
+  padding: 8px 20px;
+  width: 113px;
+}
+
+.slider__buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  z-index: 1;
+}
+
+.slider__button {
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+
+  &--back {
+    background-image: url("../../../img/icons/arrow-back.svg");
+  }
+
+  &--forward {
+    background-image: url("../../../img/icons/arrow-forward.svg");
+  }
+}
+
+.slider__toggles {
+  display: none;
+}
+

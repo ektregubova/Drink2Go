@@ -1,0 +1,52 @@
+.field-price__range {
+  width: 280px;
+}
+
+.field-price__range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: $background-scale;
+}
+
+.field-price__range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: $color-scale;
+}
+
+.field-price__range-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $color-scale;
+  background-color: $base-white;
+  cursor: pointer;
+
+  &--min {
+    top: -10px;
+    left: -9px;
+  }
+
+  &--max {
+    top: -10px;
+    right: -11px;
+  }
+}
+
+.field-price__range-inputs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.field-price__range-input {
+  width: 118px;
+  border-radius: 4px;
+  border: 2px solid $color-scale;
+  background-color: $base-white;
+  text-align: center;
+  color: $base-black;
+  height: 38px;
+}

@@ -1,0 +1,29 @@
+.catalog {
+  background-color: $background-light-grey;
+
+  //@media (min-width: $tablet-width) {
+  //}
+
+  //@media (min-width: $desktop-width) {
+  //}
+}
+
+.catalog-wrapper {
+  @include wrapper;
+}
+
+
+.catalog__list {
+  @include list-style;
+
+  //@media (min-width: $tablet-width) {
+  //  display: grid;
+  //  grid-template-columns: repeat(2, 324px);
+  //  gap: 141px 60px;
+  //}
+
+  //@media (min-width: $desktop-width) {
+  //  grid-template-columns: repeat(4, 245px);
+  //  gap: 143px 80px;
+  //}
+}

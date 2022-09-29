@@ -1,0 +1,27 @@
+//.filter-form {}
+
+.filter-form__group {
+  border: none;
+}
+
+.filter-form__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter-form__list {
+  @include list-style;
+}
+
+.filter-form__button {
+  height: 45px;
+  width: 160px;
+  font-size: 13px;
+  border: none;
+
+  &--reset {
+    color: $base-violet;
+    background-color: $base-white;
+  }
+}

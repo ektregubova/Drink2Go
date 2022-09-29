@@ -1,0 +1,35 @@
+.catalog-product {
+  @include wrapper;
+  //@media (min-width: $tablet-width) {
+
+  //}
+
+  //@media (min-width: $desktop-width) {
+
+  //}
+}
+
+.catalog-product__list {
+  @include list-style;
+  display: flex;
+  flex-direction: column;
+
+  //@media (min-width: $tablet-width) {
+  //  display: grid;
+  //  grid-template-columns: repeat(2, 324px);
+  //  gap: 141px 60px;
+  //}
+
+  //@media (min-width: $desktop-width) {
+  //  grid-template-columns: repeat(4, 245px);
+  //  gap: 143px 80px;
+  //}
+}
+
+.catalog-product__item {
+  min-height: 420px;
+
+  //@media (min-width: $tablet-width) {
+
+  //}
+}

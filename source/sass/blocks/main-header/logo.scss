@@ -1,0 +1,52 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+    padding-left: 0;
+  }
+
+  //&:hover {
+  //  opacity: 0.8;
+  //}
+
+  //&:active {
+  //  opacity: 0.6;
+  //}
+
+  //&:focus-visible {
+  //  outline: 2px solid $base-black;
+  //  outline-offset: 2px;
+  //}
+}
+
+.logo__image {
+  display: block;
+  width: 100%;
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 20px;
+    width: 146px;
+  }
+}

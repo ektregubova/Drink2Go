@@ -1,0 +1,37 @@
+.field-country__label {
+  padding-left: 54px;
+  display: block;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 24px;
+    left: 0;
+    top: 0;
+    background-color: $base-grey;
+    border-radius: 12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 2px;
+    background-color: $base-white;
+    border-radius: 50%;
+  }
+}
+
+.field-country__input:checked + .field-country__label::before {
+  background-color: $base-violet;
+}
+
+.field-country__input:checked + .field-country__label::after {
+  transform: translateX(18px);
+}

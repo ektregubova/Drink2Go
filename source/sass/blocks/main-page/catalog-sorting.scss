@@ -1,0 +1,26 @@
+.catalog-sorting {
+  display: flex;
+}
+
+.catalog-sorting__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.catalog__select-control {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  background-color: transparent;
+  color: $base-violet;
+  appearance: none;
+  background-image: url("../../../img/icons/sorting-down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  &:active {
+    background-image: url("../../../img/icons/sorting-up.svg");
+  }
+}
