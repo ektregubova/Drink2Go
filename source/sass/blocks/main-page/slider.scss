@@ -1,14 +1,31 @@
 .slider {
-  background-color: $background-flat-white;
   position: relative;
 
-  //@media (min-width: $tablet-width) {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 656px;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    background-color: $background-flat-white;
+  }
 
-  //}
+  @media (min-width: $tablet-width) {
+    height: 828px;
 
-  //@media (min-width: $desktop-width) {
+    &::before {
+      height: 640px;
+    }
+  }
 
-  //}
+  @media (min-width: $desktop-width) {
+    height: 714px;
+
+    &::before {
+      height: 714px;
+    }
+  }
 }
 
 .slider__wrapper {
@@ -16,15 +33,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 60px;
 
-  //@media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
 
-  //}
-
-  //@media (min-width: $desktop-width) {
-  //  width: 1440px;
-  //  margin: 0 auto;
-  //}
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .slider__list {
@@ -35,6 +56,38 @@
 .slider__img-wrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 146px;
+    top: 351px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    margin-bottom: 0;
+  }
+}
+
+.slider__img {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.slider__item {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .slider__item-description {
@@ -42,50 +95,76 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+  }
 }
 
-.slider__item-new {
+.slider__item-bage {
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
   color: $base-violet;
   text-align: center;
+  margin-bottom: 4px;
 }
 
 .slider__item-title {
-  font-size: 56px;
-  line-height: 80px;
+  letter-spacing: 0.02em;
+  font-size: 36px;
+  line-height: 48px;
   font-weight: 700;
   color: $base-black;
   margin: 0;
   padding: 0;
   text-align: center;
+  margin-bottom: 10px;
+  width: 280px;
 
-  //@media (min-width: $tablet-width) {
-  //}
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+    width: 608px;
+  }
 
-  //@media (min-width: $desktop-width) {
-  //}
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .slider__item-info {
   margin: 0;
   text-align: center;
+  margin-bottom: 20px;
+  width: 270px;
 
-  //@media (min-width: $tablet-width) {
-  //  font-size: 20px;
-  //  line-height: 32px;
-  //}
+  br {
+    display: none;
+  }
 
-  //@media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    width: 605px;
 
-  //}
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .slider__buy-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 230px;
 }
 
@@ -105,7 +184,7 @@
   min-height: 40px;
   text-decoration: none;
   padding: 8px 20px;
-  width: 113px;
+  width: 112px;
 }
 
 .slider__buttons {
@@ -113,15 +192,18 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  top: 50%;
+  top: 0;
   z-index: 1;
+  margin: 0;
 }
 
 .slider__button {
   border: none;
   width: 20px;
-  height: 20px;
+  height: 656px;
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &--back {
     background-image: url("../../../img/icons/arrow-back.svg");
@@ -130,9 +212,34 @@
   &--forward {
     background-image: url("../../../img/icons/arrow-forward.svg");
   }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
 }
 
 .slider__toggles {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin: 0;
+  }
+}
+
+.slider__toggle {
+  height: 4px;
+  width: 62px;
+  background-color: $base-white;
+  border: none;
+
+  &--current {
+    background-color: $base-violet;
+  }
 }
 

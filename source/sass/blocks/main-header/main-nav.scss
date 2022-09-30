@@ -4,6 +4,7 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
+    padding-right: 20px;
     justify-content: space-between;
   }
 
@@ -28,11 +29,11 @@
   content: "";
   position: absolute;
   top: 24px;
-  right: 22px;
+  right: 20px;
   height: 1.5px;
   width: 16px;
   background-color: $base-black;
-  box-shadow: 0 4px 0 0 $base-black, 0 8px 0 0 $base-black;
+  box-shadow: 0 5px 0 0 $base-black, 0 10px 0 0 $base-black;
 }
 
 .main-nav--closed .site-list {
@@ -49,8 +50,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 30px;
-    right: 20px;
+    top: 29px;
+    right: 22px;
     width: 14px;
     height: 1.5px;
     background-color: $base-black;
@@ -107,6 +108,7 @@
     width: 400px;
     justify-content: space-between;
     margin-right: 60px;
+    height: 80px;
   }
 
   @media (min-width: $desktop-width) {
@@ -121,7 +123,7 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 57px;
-  padding: 32px 20px;
+  padding: 20px;
   border-top: 1px solid $base-light-violet;
 
   &:last-child {
@@ -186,6 +188,14 @@
 
   @media (min-width: $desktop-width) {
     width: 270px;
+  }
+}
+
+.main-nav--nojs .user-list {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 0;
+    right: 60px;
   }
 }
 

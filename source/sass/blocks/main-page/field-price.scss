@@ -1,18 +1,54 @@
+.field-price {
+  padding: 0;
+  margin: 0;
+}
+
+.field-price__title {
+  margin-bottom: 32px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+}
+
 .field-price__range {
   width: 280px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 8px;
+    width: 220px;
+  }
+
+  //@media (min-width: $desktop-width) {
+
+  //    }
 }
 
 .field-price__range-scale {
   position: relative;
   height: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 37px;
   background-color: $background-scale;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
+  }
 }
 
 .field-price__range-bar {
   position: absolute;
-  height: 2px;
+  height: 4px;
   background-color: $color-scale;
+  width: 250px;
+
+  @media (min-width: $tablet-width) {
+    width: 187px;
+  }
+
+  //@media (min-width: $desktop-width) {
+
+  //    }
 }
 
 .field-price__range-toggle {
@@ -26,7 +62,7 @@
 
   &--min {
     top: -10px;
-    left: -9px;
+    left: 0;
   }
 
   &--max {
@@ -38,7 +74,7 @@
 .field-price__range-inputs {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  margin-bottom: 24px;
 }
 
 .field-price__range-input {
@@ -49,4 +85,41 @@
   text-align: center;
   color: $base-black;
   height: 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    width: 93px;
+    height: 40px;
+  }
+
+  //@media (min-width: $desktop-width) {
+
+  //    }
 }
+
+.field-price__label {
+  position: relative;
+
+  &--min::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    background-color: $base-grey;
+    top: 16px;
+    right: -27px;
+
+    @media (min-width: $tablet-width) {
+      right: -19px;
+      width: 7px;
+      top: 19px;
+    }
+
+    //@media (min-width: $desktop-width) {
+
+    //    }
+  }
+}
+

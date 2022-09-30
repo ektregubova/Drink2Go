@@ -1,14 +1,28 @@
 .catalog-sorting {
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
+  }
 }
 
 .catalog-sorting__title {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  margin: 0;
+  padding-right: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 32px;
+  }
 }
 
-.catalog__select-control {
+.catalog-sorting__select {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -23,4 +37,11 @@
   &:active {
     background-image: url("../../../img/icons/sorting-up.svg");
   }
+
+  //@media (min-width: $tablet-width) {
+  //}
+
+  //@media (min-width: $desktop-width) {
+
+  //    }
 }

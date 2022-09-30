@@ -1,3 +1,25 @@
+.field-country {
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 34px;
+  }
+
+  //@media (min-width: $desktop-width) {
+
+  //    }
+}
+
+.field-country__title {
+  margin-bottom: 19px;
+  padding: 0;
+}
+
+.field-country__item {
+  margin-bottom: 20px;
+}
+
 .field-country__label {
   padding-left: 54px;
   display: block;
