@@ -10,16 +10,21 @@
   border-radius: 4px;
   border: none;
   padding: 0;
+  cursor: pointer;
 
-  //&:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $base-light-violet;
+    outline: none;
+  }
 
-  //}
+  &:active {
+    background-color: $base-darker-violet;
+  }
 
-  //&:active {
-
-  //}
-
-  //&:focus-visible {
-
-  //}
+  &:disabled {
+    pointer-events: none;
+    background-color: $base-grey;
+  }
 }

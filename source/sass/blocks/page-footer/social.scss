@@ -1,0 +1,36 @@
+.social__item {
+  width: 40px;
+  height: 40px;
+}
+
+.social__icon {
+  fill: $base-grey;
+}
+
+.social__link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $base-lighter-violet;
+    outline: none;
+
+    .social__icon {
+      fill: $base-violet;
+    }
+  }
+
+  &:active {
+    background-color: rgba($color: $base-violet, $alpha : 0.25);
+
+    .social__icon {
+      fill: $base-violet;
+    }
+  }
+}

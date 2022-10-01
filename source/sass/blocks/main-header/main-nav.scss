@@ -8,9 +8,9 @@
     justify-content: space-between;
   }
 
-  //@media (min-width: $desktop-width) {
-
-  //}
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .main-nav__toggle {
@@ -22,6 +22,12 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  &:active {
+    background-color: $base-lighter-violet;
   }
 }
 
@@ -113,7 +119,7 @@
 
   @media (min-width: $desktop-width) {
     width: 460px;
-    margin-right: 162px;
+    margin-right: 153px;
   }
 }
 
@@ -123,11 +129,10 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 57px;
-  padding: 20px;
-  border-top: 1px solid $base-light-violet;
+  border-top: 1px solid $base-lighter-violet;
 
   &:last-child {
-    border-bottom: 1px solid $base-light-violet;
+    border-bottom: 1px solid $base-lighter-violet;
   }
 
   @media (min-width: $tablet-width) {
@@ -135,10 +140,6 @@
 
     &--active {
       position: relative;
-      //&:hover {
-      //}
-      //&:active {
-      //}
 
       &::after {
         content: "";
@@ -151,10 +152,6 @@
       }
     }
   }
-
-  //@media (min-width: $desktop-width) {
-
-  //}
 }
 
 
@@ -167,12 +164,27 @@
   color: $base-black;
   text-transform: uppercase;
   cursor: pointer;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    background-color: $base-lighter-violet;
+  }
 
   @media (min-width: $tablet-width) {
+    height: 80px;
+
     &:hover,
     &:active,
     &:focus-visible {
       color: $base-violet;
+    }
+
+    &:active {
+      background-color: $base-lighter-violet;
     }
 
     &--active {
@@ -187,7 +199,7 @@
   justify-content: space-between;
 
   @media (min-width: $desktop-width) {
-    width: 270px;
+    width: 273px;
   }
 }
 
@@ -207,8 +219,6 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    height: 80px;
-    padding: 32px 20px;
     justify-content: space-between;
   }
 
@@ -227,6 +237,30 @@
   color: $base-black;
   text-transform: uppercase;
   cursor: pointer;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    color: $base-violet;
+  }
+
+  &:active {
+    color: $base-violet;
+    background-color: $base-lighter-violet;
+
+    .user-list__icon {
+      fill: $base-violet;
+    }
+  }
 }
 
 .user-list__name {

@@ -1,12 +1,9 @@
 .catalog-sorting {
   display: flex;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 300px;
   }
 }
 
@@ -15,11 +12,7 @@
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-  padding-right: 22px;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 32px;
-  }
+  margin-right: 20px;
 }
 
 .catalog-sorting__select {
@@ -27,21 +20,28 @@
   font-size: 16px;
   line-height: 24px;
   border: none;
-  background-color: transparent;
+  cursor: pointer;
+  background-color: $background-light-grey;
   color: $base-violet;
   appearance: none;
   background-image: url("../../../img/icons/sorting-down.svg");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 134px center;
 
-  &:active {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    background-color: $base-lighter-violet;
     background-image: url("../../../img/icons/sorting-up.svg");
+
+    .catalog-sorting__option {
+      background-color: $base-white;
+      color: $base-black;
+    }
   }
 
-  //@media (min-width: $tablet-width) {
-  //}
-
-  //@media (min-width: $desktop-width) {
-
-  //    }
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
 }

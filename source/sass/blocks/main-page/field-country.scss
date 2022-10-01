@@ -6,9 +6,9 @@
     margin-right: 34px;
   }
 
-  //@media (min-width: $desktop-width) {
-
-  //    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .field-country__title {
@@ -26,6 +26,7 @@
   position: relative;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -48,7 +49,41 @@
     background-color: $base-white;
     border-radius: 50%;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      border: 2px solid $base-light-violet;
+      background-color: rgba($color: $base-violet, $alpha : 0.25);
+    }
+  }
 }
+
+.field-country__input:disabled + .field-country__label {
+  color: $base-grey;
+  pointer-events: none;
+
+  &::before {
+    background-color: $base-light-grey;
+  }
+}
+
+.field-country__input:checked:disabled + .field-country__label {
+  color: $base-grey;
+  pointer-events: none;
+
+  &::before {
+    background-color: $base-light-grey;
+  }
+
+  &::after {
+    background-color: $base-grey;
+  }
+}
+
 
 .field-country__input:checked + .field-country__label::before {
   background-color: $base-violet;

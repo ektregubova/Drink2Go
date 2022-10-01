@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     margin-right: 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .field-milk__title {
@@ -14,10 +18,6 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
   }
-
-  //@media (min-width: $desktop-width) {
-
-  //    }
 }
 
 .field-milk__item {
@@ -26,10 +26,6 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
   }
-
-  //@media (min-width: $desktop-width) {
-
-  //    }
 }
 
 .field-milk__label {
@@ -38,6 +34,7 @@
   position: relative;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -49,6 +46,53 @@
     border: 2px solid $base-grey;
     border-radius: 50%;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $base-white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      border: 2px solid $base-violet;
+    }
+
+    &::after {
+      background-color: rgba($color: $base-violet, $alpha : 0.25);
+    }
+  }
+}
+
+.field-milk__input:disabled + .field-milk__label {
+  color: $base-grey;
+  pointer-events: none;
+
+  &::before {
+    border: 2px solid $base-light-grey;
+  }
+}
+
+.field-milk__input:checked:disabled + .field-milk__label {
+  color: $base-grey;
+  pointer-events: none;
+
+  &::before {
+    border: 2px solid $base-light-grey;
+  }
+
+  &::after {
+    background-color: $base-light-grey;
+  }
 }
 
 .field-milk__input:checked + .field-milk__label::before {
@@ -56,13 +100,6 @@
 }
 
 .field-milk__input:checked + .field-milk__label::after {
-  position: absolute;
-  content: "";
   background-color: $base-violet;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  top: 4px;
-  left: 4px;
 }
 
