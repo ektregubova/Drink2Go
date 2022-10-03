@@ -179,7 +179,9 @@
 
     &:hover,
     &:active,
+    &:focus,
     &:focus-visible {
+      outline: none;
       color: $base-violet;
     }
 
@@ -250,6 +252,7 @@
   &:active,
   &:focus,
   &:focus-visible {
+    outline: none;
     color: $base-violet;
   }
 

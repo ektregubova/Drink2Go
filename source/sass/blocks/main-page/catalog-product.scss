@@ -50,6 +50,13 @@
   @media (min-width: $desktop-width) {
     padding-left: 28px;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 5px 15px rgba($color:#000000, $alpha: 0.15);
+  }
 }
 
 .catalog-product__image {
@@ -83,6 +90,11 @@
   display: block;
   text-decoration: none;
   color: $base-black;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .catalog-product__description {
