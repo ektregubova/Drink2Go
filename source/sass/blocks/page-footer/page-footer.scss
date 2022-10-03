@@ -1,7 +1,6 @@
 .page-footer__wrapper {
   @media (min-width: $desktop-width) {
-    width: 1440px;
-    margin: 0 auto;
+    @include center;
     padding: 40px;
   }
 }
@@ -16,9 +15,8 @@
 
 .page-footer__social-container {
   @include wrapper;
+  @include footer-padding;
   height: 80px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   border-bottom: 1px solid $base-lighter-violet;
   display: flex;
   justify-content: space-between;

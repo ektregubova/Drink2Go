@@ -1,6 +1,5 @@
 .field-milk {
-  padding: 0;
-  margin: 0;
+  @include margins;
 
   @media (min-width: $tablet-width) {
     margin-right: 18px;

@@ -1,8 +1,5 @@
 .info-nav {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 8px;
+  @include footer-padding;
   border-bottom: 1px solid $base-lighter-violet;
 
   @media (min-width: $tablet-width) {
@@ -18,6 +15,7 @@
 .info-nav__title {
   color: $base-violet;
   margin: 0;
+  letter-spacing: 0.02em;
 }
 
 .info-nav__list {
@@ -28,6 +26,10 @@
 .info-nav__item {
   margin-bottom: 20px;
   height: 16px;
+
+  &:last-child {
+    margin-bottom: 8px;
+  }
 }
 
 .info-nav__link {
@@ -37,6 +39,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $base-black;
+  letter-spacing: 0.02em;
 
   &:hover,
   &:focus,

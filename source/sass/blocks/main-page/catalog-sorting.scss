@@ -12,7 +12,7 @@
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 18px;
 }
 
 .catalog-sorting__select {
@@ -21,12 +21,10 @@
   line-height: 24px;
   border: none;
   cursor: pointer;
-  background-color: $background-light-grey;
   color: $base-violet;
+  font-family: "Montserrat", "Arial", sans-serif;
   appearance: none;
-  background-image: url("../../../img/icons/sorting-down.svg");
-  background-repeat: no-repeat;
-  background-position: 134px center;
+  background: $background-light-grey url("../../../img/icons/sorting-down.svg") no-repeat 133px center;
 
   &:hover,
   &:focus,
@@ -39,9 +37,5 @@
       background-color: $base-white;
       color: $base-black;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-right: 10px;
   }
 }

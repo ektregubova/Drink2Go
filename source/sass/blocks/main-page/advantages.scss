@@ -9,10 +9,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    @include center;
     padding-top: 100px;
     padding-bottom: 120px;
-    width: 1440px;
-    margin: 0 auto;
   }
 }
 
@@ -29,18 +28,17 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $base-violet;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
 }
 
 .advantages__title {
+  @include margins;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  margin: 0;
-  padding: 0;
   margin-bottom: 36px;
-  margin-top: 4px;
-
 
   @media (min-width: $tablet-width) {
     font-size: 42px;
@@ -102,9 +100,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../img/icons/speed.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+      background: url("../img/icons/speed.svg") no-repeat center;
     }
   }
 
@@ -112,9 +108,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../img/icons/convenience.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+      background: url("../img/icons/convenience.svg") no-repeat center;
     }
   }
 
@@ -122,9 +116,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../img/icons/cheerfulness.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+      background: url("../img/icons/cheerfulness.svg") no-repeat center;
     }
   }
 
@@ -132,9 +124,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../img/icons/eco-friendly.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+      background: url("../img/icons/eco-friendly.svg") no-repeat center;
     }
   }
 

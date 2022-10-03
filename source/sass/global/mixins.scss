@@ -13,3 +13,17 @@
     padding-right: 40px;
   }
 }
+
+@mixin margins() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin center() {
+  margin: 0 auto;
+  width: $desktop-width;
+}
+
+@mixin footer-padding() {
+  padding: 20px;
+}

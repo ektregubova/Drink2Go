@@ -1,6 +1,5 @@
 .field-price {
-  padding: 0;
-  margin: 0;
+  @include margins;
 }
 
 .field-price__title {

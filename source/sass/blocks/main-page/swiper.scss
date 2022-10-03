@@ -1,18 +1,21 @@
-.slider {
+.swiper {
   position: relative;
 }
 
-.slider__list {
-  @include list-style;
-}
+.swiper-wrapper {
+  width: 100vw;
+  height: 656px;
 
-.slider__item {
-  display: none;
-
-  &--current {
-    display: block;
+  @media (min-width: $tablet-width) {
+    height: 828px;
   }
 
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+}
+
+.swiper-slide {
   &--flat-white {
     background: $background-flat-white;
   }
@@ -54,34 +57,31 @@
   }
 }
 
-.slider__item-wrapper {
+.swiper-slide__wrapper {
   padding-top: 20px;
   padding-bottom: 60px;
-  height: 656px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 
   @media (min-width: $tablet-width) {
     flex-direction: column-reverse;
     padding-top: 60px;
     padding-bottom: 0;
-    height: 828px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
-    margin: 0 auto;
+    @include center;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     padding-left: 6px;
-    height: 714px;
     padding-top: 30px;
   }
 }
 
-.slider__img {
+.swiper-slide__img {
   display: block;
   margin-bottom: 10px;
 
@@ -99,11 +99,12 @@
   }
 }
 
-.slider__item-description {
+.swiper-slide__description {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 
   @media (min-width: $desktop-width) {
     align-items: flex-start;
@@ -113,7 +114,7 @@
   }
 }
 
-.slider__item-bage {
+.swiper-slide__bage {
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -123,14 +124,13 @@
   margin-bottom: 4px;
 }
 
-.slider__item-title {
+.swiper-slide__title {
+  @include margins;
   letter-spacing: 0.02em;
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
   color: $base-black;
-  margin: 0;
-  padding: 0;
   text-align: center;
   margin-bottom: 10px;
   width: 280px;
@@ -147,7 +147,7 @@
   }
 }
 
-.slider__item-info {
+.swiper-slide__info {
   margin: 0;
   text-align: center;
   margin-bottom: 20px;
@@ -173,51 +173,49 @@
   }
 }
 
-.slider__buy-wrapper {
+.swiper-slide__buy-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 230px;
+  margin-top: auto;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
-.slider__item-price {
+.swiper-slide__price {
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
 }
 
-.slider__item-price-old {
+.swiper-slide__price-old {
   font-size: 16px;
   line-height: 32px;
   color: $base-violet;
 }
 
-.slider__item-button {
+.swiper-slide__button {
   min-height: 40px;
   text-decoration: none;
   padding: 8px 20px;
   width: 112px;
 }
 
-.slider__button {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   cursor: pointer;
   border: none;
   width: 20px;
   height: 656px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../../../img/icons/arrow.svg");
-  top: 0;
+  background: transparent url("../../../img/icons/arrow.svg") no-repeat center;
+  top: 22px;
 
-  &--back {
-    left: 0;
-  }
-
-  &--forward {
-    right: 0;
-    transform: rotate(180deg);
+  &::after {
+    display: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -248,28 +246,38 @@
   }
 }
 
-.slider__toggles {
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.swiper-pagination {
   display: none;
 
   @media (min-width: $desktop-width) {
-    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    left: 43%;
-    bottom: 60px;
-    margin: 0;
     height: 24px;
     width: 202px;
   }
 }
 
-.slider__toggle {
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 60px;
+}
+
+.swiper-pagination-bullet {
   height: 4px;
   width: 62px;
   background-color: $base-white;
-  border: none;
-  cursor: pointer;
+  margin-left: 8px;
+  border-radius: 0;
+  opacity: 1;
 
   &:hover,
   &:focus,
@@ -278,9 +286,17 @@
     background-color: rgba($color: $base-violet, $alpha : 0.25);
   }
 
-  &--current,
   &:active {
     background-color: $base-violet;
   }
-}
 
+  &--active {
+    background-color: $base-violet;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      background-color: $base-violet;
+    }
+  }
+}

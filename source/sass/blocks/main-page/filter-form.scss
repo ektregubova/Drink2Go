@@ -52,12 +52,14 @@
 
   &--reset {
     margin-top: 24px;
+    font-size: 14px;
     color: $base-violet;
     background-color: $base-white;
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
       margin-left: 30px;
+      font-size: 14px;
     }
 
     @media (min-width: $desktop-width) {
