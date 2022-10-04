@@ -5,12 +5,13 @@
     width: 400px;
     justify-content: space-between;
     margin-right: 60px;
-    height: 80px;
+    min-height: 80px;
   }
 
   @media (min-width: $desktop-width) {
     width: 460px;
-    margin-right: 150px;
+    margin-right: 148px;
+    justify-content: flex-start;
   }
 }
 
@@ -24,10 +25,15 @@
 
   &:last-child {
     border-bottom: 1px solid $base-lighter-violet;
+    margin-right: 0;
   }
 
   @media (min-width: $tablet-width) {
     border: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     &--active {
       position: relative;
@@ -42,6 +48,10 @@
         background-color: $base-violet;
       }
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 22px;
   }
 }
 

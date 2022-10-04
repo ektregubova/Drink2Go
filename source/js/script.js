@@ -4,7 +4,7 @@ let mapImage = document.querySelector('.map__image');
 let mapLeaflet = document.querySelector('.map__leaflet');
 
 mapImage.classList.add('map__image--nojs');
-mapLeaflet.classList.add('map--js');
+mapLeaflet.classList.add('map__leaflet--js');
 
 mainNav.classList.remove('main-nav--nojs');
 
@@ -41,12 +41,9 @@ const map = L.map("map")
     lng: 30.31740,
   }, 18);
 
-L.tileLayer(
-  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-  {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  },
-).addTo(map)
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map)
 
 const mainPinIcon = L.icon({
   iconUrl: './img/icons/map-pin.svg',

@@ -54,6 +54,7 @@
 .page-footer__social {
   @include list-style;
   display: flex;
+  flex-wrap: wrap;
   width: 160px;
   justify-content: space-between;
   align-items: center;

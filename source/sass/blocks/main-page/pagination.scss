@@ -16,8 +16,8 @@
 
 .pagination__link {
   display: block;
-  height: 40px;
-  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
   border-radius: 4px;
   padding: 8px;
   background-color: $base-white;
@@ -100,6 +100,7 @@
 .pagination__list {
   @include list-style;
   display: flex;
+  flex-wrap: wrap;
   width: 160px;
   justify-content: space-between;
 

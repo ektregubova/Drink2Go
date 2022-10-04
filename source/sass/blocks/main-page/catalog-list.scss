@@ -22,7 +22,6 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
   padding-top: 40px;
   padding-left: 20px;
@@ -53,7 +52,6 @@
 
 .catalog-list__image {
   display: block;
-  padding-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 30px;
@@ -82,6 +80,7 @@
   display: block;
   text-decoration: none;
   color: $base-black;
+  margin-bottom: auto;
 
   &:focus,
   &:focus-visible {
@@ -128,7 +127,7 @@
 .catalog-list__button {
   font-size: 14px;
   line-height: 20px;
-  height: 36px;
+  min-height: 36px;
   width: 141px;
   padding-left: 25px;
   position: relative;
