@@ -20,17 +20,19 @@
   &:focus-visible {
     background-color: $base-lighter-violet;
     outline: none;
-
-    .social__icon {
-      fill: $base-violet;
-    }
   }
 
   &:active {
     background-color: rgba($color: $base-violet, $alpha : 0.25);
-
-    .social__icon {
-      fill: $base-violet;
-    }
   }
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon,
+.social__link:focus-visible .social__icon {
+  fill: $base-violet;
+}
+
+.social__link:active .social__icon {
+  fill: $base-violet;
 }

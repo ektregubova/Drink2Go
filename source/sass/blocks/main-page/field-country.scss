@@ -48,16 +48,14 @@
     background-color: $base-white;
     border-radius: 50%;
   }
+}
 
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    outline: none;
-
-    &::before {
-      border: 2px solid $base-light-violet;
-      background-color: rgba($color: $base-violet, $alpha : 0.25);
-    }
+.field-country__input:hover + .field-country__label,
+.field-country__input:focus + .field-country__label,
+.field-country__input:focus-visible + .field-country__label {
+  &::before {
+    border: 2px solid $base-light-violet;
+    background-color: rgba($color: $base-violet, $alpha : 0.25);
   }
 }
 

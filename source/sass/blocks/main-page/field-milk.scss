@@ -56,19 +56,17 @@
     top: 4px;
     left: 4px;
   }
+}
 
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    outline: none;
+.field-milk__input:hover + .field-milk__label,
+.field-milk__input:focus + .field-milk__label,
+.field-milk__input:focus-visible + .field-milk__label {
+  &::before {
+    border: 2px solid $base-violet;
+  }
 
-    &::before {
-      border: 2px solid $base-violet;
-    }
-
-    &::after {
-      background-color: rgba($color: $base-violet, $alpha : 0.25);
-    }
+  &::after {
+    background-color: rgba($color: $base-violet, $alpha : 0.25);
   }
 }
 
@@ -101,4 +99,3 @@
 .field-milk__input:checked + .field-milk__label::after {
   background-color: $base-violet;
 }
-

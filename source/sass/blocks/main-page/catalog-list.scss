@@ -54,11 +54,7 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -82,9 +78,10 @@
   color: $base-black;
   margin-bottom: auto;
 
+  &:hover,
   &:focus,
   &:focus-visible {
-    outline: none;
+    outline: 1px solid $base-violet;
   }
 }
 
@@ -137,8 +134,7 @@
     content: "";
     width: 20px;
     height: 16px;
-    background-image: url("../../../img/icons/button-cart.svg");
+    background-image: url("../img/icons/button-cart.svg");
     left: 20px;
   }
 }
-

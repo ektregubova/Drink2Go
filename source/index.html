@@ -9,13 +9,13 @@
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./leaflet/leaflet.css" />
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="img/favicon/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./leaflet/leaflet.css" />
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
@@ -27,21 +27,30 @@
           <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
           <img class="logo__image" src="img/icons/logo-mobile.svg" width="32" height="36" alt="Магазин Drink2Go.">
         </picture>
-        <span class="logo__text">Интернет-магазин кофейных напитков</span>
+        <span class="logo__text">
+          Интернет-магазин кофейных напитков
+        </span>
       </a>
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active ">
-            <a class="site-list__link site-list__link--active">Главная</a>
+            <a class="site-list__link site-list__link--active">
+              Главная
+            </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#catalog">Каталог</a>
+            <a class="site-list__link" href="#catalog">
+              Каталог</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Доставка</a>
+            <a class="site-list__link" href="#">
+              Доставка
+            </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">О нас</a>
+            <a class="site-list__link" href="#">
+              О нас
+            </a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
@@ -50,7 +59,9 @@
               <svg class="user-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="./img/sprite/sprite.svg#user"></use>
               </svg>
-              <span class="user-list__name">Войти</span>
+              <span class="user-list__name">
+                Войти
+              </span>
             </a>
           </li>
           <li class="user-list__item">
@@ -58,12 +69,16 @@
               <svg class="user-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="./img/sprite/sprite.svg#cart"></use>
               </svg>
-              <span class="user-list__name">Корзина</span>
+              <span class="user-list__name">
+                Корзина
+              </span>
             </a>
           </li>
         </ul>
         <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
         </button>
       </nav>
     </div>
@@ -77,16 +92,16 @@
           <div class="swiper-slide__wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
-                srcset="img/images/flat_white_img-desktop.webp, img/images/flat_white_img-desktop@2x.webp 2x">
+                srcset="img/images/flat-white-desktop.webp, img/images/flat-white-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/images/flat_white_img-tablet.webp, img/images/flat_white_img-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/images/flat_white_img.webp, img/images/flat_white_img@2x.webp 2x">
+                srcset="img/images/flat-white-tablet.webp, img/images/flat-white-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/images/flat-white.webp, img/images/flat-white@2x.webp 2x">
               <source media="(min-width: 1440px)"
-                srcset="img/images/flat_white_img-desktop.png, img/images/flat_white_img-desktop@2x.png 2x">
+                srcset="img/images/flat-white-desktop.png, img/images/flat-white-desktop@2x.png 2x">
               <source media="(min-width: 768px)"
-                srcset="img/images/flat_white_img-tablet.png, img/images/flat_white_img-tablet@2x.png 2x">
-              <img class="swiper-slide__img" src="img/images/flat_white_img.png"
-                srcset="img/images/flat_white_img@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт.">
+                srcset="img/images/flat-white-tablet.png, img/images/flat-white-tablet@2x.png 2x">
+              <img class="swiper-slide__img" src="img/images/flat-white.png" srcset="img/images/flat-white@2x.png 2x"
+                width="280" height="280" alt="Декаф Флэт Уайт.">
             </picture>
             <div class="swiper-slide__description">
               <span class="swiper-slide__bage">Новинка!</span>
@@ -110,16 +125,16 @@
           <div class="swiper-slide__wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
-                srcset="img/images/lavender_img-desktop.webp, img/images/lavender_img-desktop@2x.webp 2x">
+                srcset="img/images/lavender-desktop.webp, img/images/lavender-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/images/lavender_img-tablet.webp, img/images/lavender_img-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/images/lavender_img.webp, img/images/lavender_img@2x.webp 2x">
+                srcset="img/images/lavender-tablet.webp, img/images/lavender-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/images/lavender.webp, img/images/lavender@2x.webp 2x">
               <source media="(min-width: 1440px)"
-                srcset="img/images/lavender_img-desktop.png, img/images/lavender_img-desktop@2x.png 2x">
+                srcset="img/images/lavender-desktop.png, img/images/lavender-desktop@2x.png 2x">
               <source media="(min-width: 768px)"
-                srcset="img/images/lavender_img-tablet.png, img/images/lavender_img-tablet@2x.png 2x">
-              <img class="swiper-slide__img" src="img/images/lavender_img.png"
-                srcset="img/images/lavender_img@2x.png 2x" width="280" height="280" alt="Лавендер Латте.">
+                srcset="img/images/lavender-tablet.png, img/images/lavender-tablet@2x.png 2x">
+              <img class="swiper-slide__img" src="img/images/lavender.png" srcset="img/images/lavender@2x.png 2x"
+                width="280" height="280" alt="Лавендер Латте.">
             </picture>
             <div class="swiper-slide__description">
               <span class="swiper-slide__bage">Новинка!</span>
@@ -143,16 +158,16 @@
           <div class="swiper-slide__wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
-                srcset="img/images/espresso_img-desktop.webp, img/images/espresso_img-desktop@2x.webp 2x">
+                srcset="img/images/espresso-desktop.webp, img/images/espresso-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/images/espresso_img-tablet.webp, img/images/espresso_img-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/images/espresso_img.webp, img/images/espresso_img@2x.webp 2x">
+                srcset="img/images/espresso-tablet.webp, img/images/espresso-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/images/espresso.webp, img/images/espresso@2x.webp 2x">
               <source media="(min-width: 1440px)"
-                srcset="img/images/espresso_img-desktop.png, img/images/espresso_img-desktop@2x.png 2x">
+                srcset="img/images/espresso-desktop.png, img/images/espresso-desktop@2x.png 2x">
               <source media="(min-width: 768px)"
-                srcset="img/images/espresso_img-tablet.png, img/images/espresso_img-tablet@2x.png 2x">
-              <img class="swiper-slide__img" src="img/images/espresso_img.png"
-                srcset="img/images/espresso_img@2x.png 2x" width="280" height="280" alt="Трипл Эспрессо.">
+                srcset="img/images/espresso-tablet.png, img/images/espresso-tablet@2x.png 2x">
+              <img class="swiper-slide__img" src="img/images/espresso.png" srcset="img/images/espresso@2x.png 2x"
+                width="280" height="280" alt="Трипл Эспрессо.">
             </picture>
             <div class="swiper-slide__description">
               <span class="swiper-slide__bage">Новинка!</span>
@@ -248,19 +263,19 @@
                 <ul class="filter-form__list field-milk__list">
                   <li class="field-milk__item">
                     <input class="field-milk__input visually-hidden" type="radio" id="no-matter" name="milk" checked>
-                    <label class="field-milk__label" for="no-matter" tabindex="0">Неважно</label>
+                    <label class="field-milk__label" for="no-matter">Неважно</label>
                   </li>
                   <li class="field-milk__item">
                     <input class="field-milk__input visually-hidden" type="radio" id="animal-milk" name="milk">
-                    <label class="field-milk__label" for="animal-milk" tabindex="0">Только животное</label>
+                    <label class="field-milk__label" for="animal-milk">Только животное</label>
                   </li>
                   <li class="field-milk__item">
                     <input class="field-milk__input visually-hidden" type="radio" id="vegetable-milk" name="milk">
-                    <label class="field-milk__label" for="vegetable-milk" tabindex="0">Только растительное</label>
+                    <label class="field-milk__label" for="vegetable-milk">Только растительное</label>
                   </li>
                   <li class="field-milk__item">
                     <input class="field-milk__input visually-hidden" type="radio" id="without-milk" name="milk">
-                    <label class="field-milk__label" for="without-milk" tabindex="0">Без молока</label>
+                    <label class="field-milk__label" for="without-milk">Без молока</label>
                   </li>
                 </ul>
               </fieldset>
@@ -270,24 +285,24 @@
                   <li class="field-country__item">
                     <input class="field-country__input visually-hidden" type="checkbox" name="Brazil" id="Brazil"
                       checked>
-                    <label class="field-country__label" for="Brazil" tabindex="0">Бразилия</label>
+                    <label class="field-country__label" for="Brazil">Бразилия</label>
                   </li>
                   <li class="field-country__item">
                     <input class="field-country__input visually-hidden" type="checkbox" name="Ethiopia" id="Ethiopia">
-                    <label class="field-country__label" for="Ethiopia" tabindex="0">Эфиопия</label>
+                    <label class="field-country__label" for="Ethiopia">Эфиопия</label>
                   </li>
                   <li class="field-country__item">
                     <input class="field-country__input visually-hidden" type="checkbox" name="Colombia" id="Colombia">
-                    <label class="field-country__label" for="Colombia" tabindex="0">Колумбия</label>
+                    <label class="field-country__label" for="Colombia">Колумбия</label>
                   </li>
                   <li class="field-country__item">
                     <input class="field-country__input visually-hidden" type="checkbox" name="Costa-Rica"
                       id="Costa-Rica">
-                    <label class="field-country__label" for="Costa-Rica" tabindex="0">Коста-Рика</label>
+                    <label class="field-country__label" for="Costa-Rica">Коста-Рика</label>
                   </li>
                   <li class="field-country__item">
                     <input class="field-country__input visually-hidden" type="checkbox" name="Peru" id="Peru">
-                    <label class="field-country__label" for="Peru" tabindex="0">Перу</label>
+                    <label class="field-country__label" for="Peru">Перу</label>
                   </li>
                 </ul>
               </fieldset>
@@ -474,13 +489,13 @@
       </div>
       <picture>
         <source type="image/webp" media="(min-width: 1440px)"
-          srcset="img/map/map_bg-desktop.webp, img/map/map_bg-desktop@2x.webp 2x">
+          srcset="img/map/map-bg-desktop.webp, img/map/map-bg-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
-          srcset="img/map/map_bg-tablet.webp, img/map/map_bg-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/map/map_bg.webp, img/map/map_bg@2x.webp 2x">
-        <source media="(min-width: 1440px)" srcset="img/map/map_bg-desktop.png, img/map/map_bg-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/map/map_bg-tablet.png, img/map/map_bg-tablet@2x.png 2x">
-        <img class="map__image" src="img/map/map_bg.png" srcset="img/map/map_bg@2x.png 2x" width="320" height="420"
+          srcset="img/map/map-bg-tablet.webp, img/map/map-bg-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/map/map-bg.webp, img/map/map-bg@2x.webp 2x">
+        <source media="(min-width: 1440px)" srcset="img/map/map-bg-desktop.png, img/map/map-bg-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/map/map-bg-tablet.png, img/map/map-bg-tablet@2x.png 2x">
+        <img class="map__image" src="img/map/map-bg.png" srcset="img/map/map-bg@2x.png 2x" width="320" height="420"
           alt="Расположение.">
       </picture>
     </div>

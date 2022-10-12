@@ -24,18 +24,20 @@
   color: $base-violet;
   font-family: "Montserrat", "Arial", sans-serif;
   appearance: none;
-  background: $background-light-grey url("../../../img/icons/sorting-down.svg") no-repeat 133px center;
+  background: $background-light-grey url("../img/icons/sorting-down.svg") no-repeat 133px center;
 
   &:hover,
   &:focus,
   &:focus-visible {
     outline: none;
     background-color: $base-lighter-violet;
-    background-image: url("../../../img/icons/sorting-up.svg");
-
-    .catalog-sorting__option {
-      background-color: $base-white;
-      color: $base-black;
-    }
+    background-image: url("../img/icons/sorting-up.svg");
   }
+}
+
+.catalog-sorting__select:hover .catalog-sorting__option,
+.catalog-sorting__select:focus .catalog-sorting__option,
+.catalog-sorting__select:focus-visible .catalog-sorting__option {
+  background-color: $base-white;
+  color: $base-black;
 }

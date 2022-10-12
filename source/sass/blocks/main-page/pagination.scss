@@ -31,7 +31,7 @@
   cursor: pointer;
 
   &--prev {
-    background-image: url("../../../img/icons/pagination-prev.svg");
+    background-image: url("../img/icons/pagination-prev.svg");
 
     @media (min-width: $tablet-width) {
       width: 140px;
@@ -40,7 +40,7 @@
   }
 
   &--next {
-    background-image: url("../../../img/icons/pagination-next.svg");
+    background-image: url("../img/icons/pagination-next.svg");
 
     @media (min-width: $tablet-width) {
       width: 140px;
@@ -112,4 +112,3 @@
     width: 160px;
   }
 }
-

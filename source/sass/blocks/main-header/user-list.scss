@@ -29,7 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
@@ -56,11 +56,11 @@
   &:active {
     color: $base-violet;
     background-color: $base-lighter-violet;
-
-    .user-list__icon {
-      fill: $base-violet;
-    }
   }
+}
+
+.user-list__link:active .user-list__icon {
+  fill: $base-violet;
 }
 
 .user-list__name {

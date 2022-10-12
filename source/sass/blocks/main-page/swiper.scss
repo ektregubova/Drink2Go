@@ -219,7 +219,7 @@
   border: none;
   width: 20px;
   height: 656px;
-  background: transparent url("../../../img/icons/arrow.svg") no-repeat center;
+  background: transparent url("../img/icons/arrow.svg") no-repeat center;
   top: 22px;
 
   &::after {
@@ -239,18 +239,18 @@
   &:focus,
   &:focus-visible {
     outline: none;
-    background: url("../../../img/icons/arrow.svg") no-repeat center,
+    background: url("../img/icons/arrow.svg") no-repeat center,
       linear-gradient(to right, $base-white 0%, transparent);
   }
 
   &:active {
-    background: url("../../../img/icons/arrow.svg") no-repeat center,
+    background: url("../img/icons/arrow.svg") no-repeat center,
       linear-gradient(to right, (rgba($color: $base-violet, $alpha: 0.25), rgba($color: $base-violet, $alpha: 0)));
   }
 
   &:disabled {
     pointer-events: none;
-    background-image: url("../../../img/icons/arrow-disabled.svg");
+    background-image: url("../img/icons/arrow-disabled.svg");
   }
 }
 
